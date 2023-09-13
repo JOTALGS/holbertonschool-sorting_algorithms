@@ -11,19 +11,16 @@ insertion_sort_list(listint_t **list)
 	node = *list;
 	/* start a loop to travel the list */
 	while (node)
-	{   
+	{
 		/* set a pointer to each, next and previus elements of the list */
 		ant = node->prev;
 		prox = node->next;
 		while (ant && (ant->n > node->n))
 		{
 			/* change pointer between current and previus node */
-	
+
 			ant->next = node->next;
-			/* 
-			If next node exist, change its *prev pointer to ponint to the ant node and not to the current anymore
-			has to be befor modifiyng the nodes pointers
-			*/
+			/* If next node exist, change its prev pointer to ponint to the ant node and not to the current anymore has to be befor modifiyng the nodes pointers */
 			if (node->next != NULL)
 			{
 				node->next->prev = ant;
@@ -32,7 +29,7 @@ insertion_sort_list(listint_t **list)
 			node->next = ant;
 			node->prev = ant->prev;
 			ant->prev = node;
-	
+
 			/* if prev node exist, change its *next pointer */
 			if (node->prev)
 			{
@@ -47,5 +44,5 @@ insertion_sort_list(listint_t **list)
 			print_list(*list);
 		}
 		node = prox;
-	}    
+	}
 }

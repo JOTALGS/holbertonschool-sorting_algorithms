@@ -24,17 +24,17 @@ partition(int *arr, size_t low, size_t high, size_t size)
 			i++;
 			if (i != j)
 			{
-				swap(&arr[i],&arr[j]);
+				swap(&arr[i], &arr[j]);
 				print_array(arr, size);
 			}   
 		}
 	}
 	if (arr[i + 1] != arr[high])
 	{
-		swap(&arr[i + 1],&arr[high]);
+		swap(&arr[i + 1], &arr[high]);
 		print_array(arr, size);
 	}
-	return (i + 1); 
+	return (i + 1);
 }
 
 void
