@@ -26,7 +26,6 @@ partition(int *arr, size_t low, size_t high, size_t size)
         }
     }
     swap(&arr[i + 1],&arr[high]);
-    print_array(arr, size);
     return (i + 1); 
 
 }
