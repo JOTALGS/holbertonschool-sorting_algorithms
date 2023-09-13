@@ -5,6 +5,9 @@ insertion_sort_list(listint_t **list)
 {
     listint_t *node, *prox, *ant;
 
+    if (!list || !*list)
+        return;
+
     node = *list;
     /* start a loop to travel the list */
     while (node)
