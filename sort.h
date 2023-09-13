@@ -20,3 +20,6 @@ void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void swap(int *a, int *b);
 void insertion_sort_list(listint_t **list);
+size_t partition(int *arr, size_t low, size_t high);
+void quick_sort(int *array, size_t size);
+void qs_recursive(int *array, int first, int last);
