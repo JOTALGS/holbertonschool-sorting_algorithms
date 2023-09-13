@@ -18,9 +18,11 @@ insertion_sort_list(listint_t **list)
 		while (ant && (ant->n > node->n))
 		{
 			/* change pointer between current and previus node */
-
 			ant->next = node->next;
-			/* If next node exist, change its prev pointer to ponint to the ant node and not to the current anymore has to be befor modifiyng the nodes pointers */
+			/** If next node exist, 
+			 * change its prev pointer to ponint to the ant node and not to the current anymore
+			 * it has to be before modifiyng the nodes pointers
+			 */
 			if (node->next != NULL)
 			{
 				node->next->prev = ant;
