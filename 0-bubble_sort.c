@@ -5,9 +5,9 @@ swap(int *a, int *b)
 {
 	int tmp;
 
-	tmp = a;
+	tmp = *a;
 	*a = *b;
-	b = tmp;
+	*b = tmp;
 }
 
 void
