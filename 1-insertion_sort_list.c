@@ -6,7 +6,6 @@ insertion_sort_list(listint_t **list)
     listint_t *node, *prox, *ant;
 
     node = *list;
-    print_list(*list);
     /* start a loop to travel the list */
     while (node)
     {   
