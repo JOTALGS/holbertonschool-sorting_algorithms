@@ -4,9 +4,9 @@ void swap(int *a, int *b)
 {
     int tmp;
 
-    tmp = *a;
+    tmp = a;
     *a = *b;
-    *b = tmp;
+    b = tmp;
 }
 
 void bubble_sort(int *array, size_t size)
@@ -28,6 +28,5 @@ void bubble_sort(int *array, size_t size)
         }
         if (ssw == 0)
             break;
-        print_array(array, size);
     }
 }
