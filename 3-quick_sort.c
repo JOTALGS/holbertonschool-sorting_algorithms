@@ -10,7 +10,7 @@ void swap(int *a, int *b)
 }
 
 size_t
-partition(int *arr, size_t low, size_t high)
+partition(int *arr, size_t low, size_t high, size_t size)
 {
     int pivot = arr[high];
     size_t i = (low - 1);
@@ -22,26 +22,26 @@ partition(int *arr, size_t low, size_t high)
         {
             i++;
             swap(&arr[i],&arr[j]);
-            print_array(arr, high+1);
+            print_array(arr, size);
         }
     }
     swap(&arr[i + 1],&arr[high]);
-    print_array(arr, high +1);
+    print_array(arr, size);
     return (i + 1); 
 
 }
 
 void
-qs_recursive(int *array, int first, int last)
+qs_recursive(int *array, int first, int last, size_t size)
 {
     int piv;
 
     if (first < last)
     {
-        piv = partition(array, first, last);
+        piv = partition(array, first, last, size);
 
-        qs_recursive(array, first, piv - 1);
-        qs_recursive(array, piv + 1, last);
+        qs_recursive(array, first, piv - 1, size);
+        qs_recursive(array, piv + 1, last, size);
     }
 }
 
@@ -52,6 +52,6 @@ quick_sort(int *array, size_t size)
     size_t f = 0;
     size_t l = size - 1;
     
-    qs_recursive(array, f, l);
+    qs_recursive(array, f, l, size);
 
 }
