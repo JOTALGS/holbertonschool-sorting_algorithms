@@ -23,7 +23,7 @@ insertion_sort_list(listint_t **list)
 			{
 				node->next->prev = ant;
 			}
-			/* continue changeing node and ant */      
+			/* continue changeing node and ant */
 			node->next = ant;
 			node->prev = ant->prev;
 			ant->prev = node;
